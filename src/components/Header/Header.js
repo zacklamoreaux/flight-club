@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import './Header.css'
 
 export default class Header extends Component {
+  login() {
+    axios.get('/auth')
+  }
   render() {
     return (
       <div>
@@ -14,7 +18,7 @@ export default class Header extends Component {
           </div>
           <div>
             <a href={process.env.REACT_APP_LOGIN}>
-              <button className='login-btn'>login</button>
+              <button className='login-btn' onClick={() => this.login()}>login</button>
             </a>
           </div>
         </div>
