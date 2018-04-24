@@ -1,0 +1,13 @@
+.tc-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: blueviolet;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.tc {
+  width: 100px;
+  height: 100px;
+  background: brown
+}

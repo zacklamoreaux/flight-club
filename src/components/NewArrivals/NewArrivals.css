@@ -1,0 +1,15 @@
+.na-wrapper {
+  display: flex;
+  justify-content: center;
+  background: burlywood
+}
+
+.na-header {
+  display: flex;
+  background: burlywood
+
+}
+
+/* .na-display {
+
+} */
