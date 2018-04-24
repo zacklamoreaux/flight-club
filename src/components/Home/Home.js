@@ -6,13 +6,14 @@ import NewArrivals from '../NewArrivals/NewArrivals'
 import TopCats from '../TopCats/TopCats'
 import Recom from '../Recommendations/Recom'
 import OurStores from '../OurStores/OurStores'
+import ReactCarousel from '../Carousel/Carousel'
 
 export default class Home extends Component {
   render() {
     return (
       <div>
         <Header />
-        CAROUSEL
+        <ReactCarousel />
         <FindYourPair />
         <NewArrivals />
         <TopCats />
