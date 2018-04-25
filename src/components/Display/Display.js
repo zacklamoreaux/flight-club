@@ -5,7 +5,7 @@ export default class Display extends Component {
   render() {
     return (
       <div>
-        <Card />
+        <Card id={3}/>
       </div>
     )
   }

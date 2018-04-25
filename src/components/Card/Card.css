@@ -1,0 +1,19 @@
+.card {
+  width: 219.99px;
+  height:315px;
+  background: fuchsia;
+}
+/* .img-wrapper {
+  width: 100px;
+  height: 175px;
+} */
+
+.img {
+  width: 209.99px;
+  height:149.9px;
+  padding: 5px;
+}
+
+.prod-info {
+  text-align: center;
+}
