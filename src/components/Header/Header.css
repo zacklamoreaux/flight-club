@@ -5,7 +5,11 @@
 }
 
 .logo-wrapper {
-  margin: 20px;
+  float: left;
+}
+
+.search-bar {
+  align-items: flex-start
 }
 
 .login-btn {

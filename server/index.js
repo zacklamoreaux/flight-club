@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 const express = require('express'),
       session = require('express-session'),
       bodyParser = require('body-parser'),
@@ -18,6 +17,7 @@ const {
   CALLBACK_URL
 } = process.env
 
+// app.use(express.static(__dirname + '../build'))
 
 app.use(bodyParser.json())
 app.use(session({
@@ -34,22 +34,62 @@ passport.use(new Auth0Strategy({
   callbackURL: CALLBACK_URL,
   scope: 'openid profile'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
-  // console.log(profile)
-  done(null, profile)
+  const db = app.get('db')
+  const { id, display_name } = profile
+  db.find_user([id]).then( users => {
+    if (users[0]) {
+      return done(null, users[0].id)
+    } else {
+      db.create_user([display_name, id]).then( createUser => {
+        return done(null, createUser[0].id)
+      })
+    }
+  })
 }))
 
-passport.serializeUser( (profile, done) => {
-  done(null, profile);
+passport.serializeUser( (id, done) => {
+  console.log(id)
+  return done(null, id);
 })
-passport.deserializeUser( (profile, done) => {
-  done(null, profile);
+passport.deserializeUser( (id, done) => {
+  app.get('db').find_session_user([id]).then( user => {
+    done(null, user[0])
+  })
 })
 
 app.get('/auth', passport.authenticate('auth0'))
-
 app.get('/auth/callback', passport.authenticate('auth0', {
   successRedirect: 'http://localhost:3000'
 }))
+
+app.get('/auth/me', function(req, res) {
+  if(req.user) {
+    res.status(200).send(req.user)
+  } else {
+    res.sendStatus(401)
+  }
+})
+
+app.get('/logout', function(req, res) {
+  req.logout()
+  res.redirect('http://localhost:3000')
+})
+
+
+
+app.get('/clone/:brand', function(req, res) {
+  const dbInstance = req.app.get('db')
+
+  dbInstance.get_products_by_brand()
+  .then( products => {
+    res.status(200).send(products)
+  })
+  .catch( (err) => {
+    res.status(500).send(err)
+  })
+})
+
+
 
 massive(CONNECTION_STRING).then( db => {
   app.set('db', db)

@@ -1,8 +1,8 @@
-CREATE TABLE IF NOT EXISTS users (
-  ID SERIAL PRIMARY KEY,
-  AUTH_ID VARCHAR(100),
-  NAME TEXT,
-  EMAIL_ADDRESS VARCHAR(100),
-  ADDRESS VARCHAR(50),
-  PHONE_NUMBER VARCHAR(20)
+create table if not exists (
+  id serial primary key,
+  display_name text,
+  auth_id text,
+  email_address varchar(100),
+  address varchar(80),
+  phone_number varchar(20)
 )

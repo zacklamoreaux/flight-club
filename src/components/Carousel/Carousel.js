@@ -5,7 +5,7 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 export default class ReactCarousel extends Component {
   render() {
     return (
-      <Carousel>
+      <Carousel >
         <div>
           <img src='https://www.flightclub.com/media/upload/slideshow/items/2018-04-17-03-04-441978063146.jpg' />
         </div>

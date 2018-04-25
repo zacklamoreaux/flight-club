@@ -6,6 +6,9 @@ export default class Header extends Component {
   login() {
     axios.get('/auth')
   }
+  getBrand() {
+    axios.get('/clone/:brand')
+  }
   render() {
     return (
       <div>
@@ -24,7 +27,7 @@ export default class Header extends Component {
         </div>
         <div className='header-bottom'>
           <div className="topnav">
-            <a href="#air-jordan">Air Jordan</a>
+            <a href="#air-jordan" onClick={() => this.getBrand()}>Air Jordan</a>
             <a href="#nike">Nike</a>
             <a href="#adidas">Adidas</a>
             <a href='#yeezy'>Yeezy</a>
