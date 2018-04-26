@@ -1,7 +1,7 @@
 .fyp-wrapper {
   display: flex;
   justify-content: space-around;
-  background: darkturquoise
+  background: orange
 }
 .fyp {
   background: dimgray;
