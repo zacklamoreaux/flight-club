@@ -85,7 +85,7 @@ app.get('/clone/product/:id', function(req, res) {
   })
 })
 
-app.get('/clone/products/:brand', function(req,res) {
+app.get('/clone/products/:brand', function(req, res) {
   const db = req.app.get('db')
   const products = []
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 export default class Header extends Component {
   login() {
@@ -13,13 +14,11 @@ export default class Header extends Component {
     return (
       <div>
         <div className='header-top'>
-          <div className='logo-wrapper'>
+          <div className='ht-left'>
             <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' alt='logo' className='logo' />
-          </div>
-          <div>
             <input type='text' className='search-bar' />
           </div>
-          <div>
+          <div className='ht-right'>
             <a href={process.env.REACT_APP_LOGIN}>
               <button className='login-btn' onClick={() => this.login()}>login</button>
             </a>
@@ -27,16 +26,16 @@ export default class Header extends Component {
         </div>
         <div className='header-bottom'>
           <div className="topnav">
-            <a href="#air-jordan" onClick={() => this.getBrand()}>Air Jordan</a>
-            <a href="#nike">Nike</a>
-            <a href="#adidas">Adidas</a>
-            <a href='#yeezy'>Yeezy</a>
-            <a href='#footwear'>Footwear</a>
-            <a href='#apparel'>Apparel</a>
-            <a href='#accessories'>Accessories</a>
-            <a href='#new-arrivals'>New Arrivals</a>
-            <a href='#gift-cards'>Gift Cards</a>
-            <a href='#price-drops'>Price Drops</a>
+            <Link to='/category/air_jordan'>Air Jordan</Link>
+            <Link to='/category/nike'>Nike</Link>
+            <Link to='/category/adidas'>Adidas</Link>
+            <Link to='/category/yeezy'>Yeezy</Link>
+            <Link to='/category/footwear'>Footwear</Link>
+            <Link to='/category/apparel'>Apparel</Link>
+            <Link to='/category/accessories'>Accessories</Link>
+            <Link to='/category/new_arrivals'>New Arrivals</Link>
+            <Link to='/category/gift_cards'>Gift Cards</Link>
+            <Link to='/category/price_drops'>Price Drops</Link>
           </div>
         </div>
       </div>

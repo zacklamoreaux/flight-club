@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import './Home.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import FindYourPair from '../FindYourPair/FindYourPair'
@@ -12,9 +13,8 @@ import Display from '../Display/Display'
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <div className='app'>
         <Header />
-        <Display />
         <ReactCarousel />
         <FindYourPair />
         <NewArrivals />

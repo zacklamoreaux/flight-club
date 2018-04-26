@@ -38,7 +38,7 @@ export default class Card extends Component {
     return (
       <div className='card'>
         <div className='img-wrapper'>
-          <img className='img' src={this.state.img} />
+          <img className='img' src={this.state.img} alt='shoe' />
         </div>  
         <div className='prod-info'>
           {this.state.brand}

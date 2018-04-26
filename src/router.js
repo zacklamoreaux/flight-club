@@ -8,8 +8,8 @@ export default (
   <HashRouter>
     <div>
       <Route exact path='/' component={Home} />
-      <Route path='/category' component={Category} />
-      <Route path='individual' component={Individual} />
+      <Route path='/category/:category' component={Category} />
+      <Route path='/individual/:individual' component={Individual} />
     </div>
   </HashRouter>
 )

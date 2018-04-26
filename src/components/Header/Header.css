@@ -1,16 +1,24 @@
 .header-top {
+  margin: 0px 140px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
-.logo-wrapper {
-  float: left;
+.ht-left {
+  display: flex;
+  align-items: center
 }
+
+.ht-right {
+  display: flex;
+  justify-content: end;
+  margin: 0px 900px;
+  align-items: center
+}
+
 .logo {
   padding: 15px;
-  height: 40px;
-  width: 200px;
+  height: 32px;
+  width: 170px;
 }
 
 .search-bar {
@@ -45,3 +53,10 @@
   color: black;
 }
 
+.header-bottom {
+  background: #333;
+}
+
+.topnav {
+  margin: 0px 250px;
+}
