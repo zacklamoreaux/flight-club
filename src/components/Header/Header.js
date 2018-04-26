@@ -14,7 +14,7 @@ export default class Header extends Component {
       <div>
         <div className='header-top'>
           <div className='logo-wrapper'>
-            <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' alt='logo'/>
+            <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' alt='logo' className='logo' />
           </div>
           <div>
             <input type='text' className='search-bar' />

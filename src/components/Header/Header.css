@@ -7,6 +7,11 @@
 .logo-wrapper {
   float: left;
 }
+.logo {
+  padding: 15px;
+  height: 40px;
+  width: 200px;
+}
 
 .search-bar {
   align-items: flex-start

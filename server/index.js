@@ -85,15 +85,15 @@ app.get('/clone/product/:id', function(req, res) {
   })
 })
 
-// app.get('/clone/products/:brand', function(req,res) {
-//   const db = req.app.get('db')
-//   const products = []
+app.get('/clone/products/:brand', function(req,res) {
+  const db = req.app.get('db')
+  const products = []
 
-//   db.get_products_by_brand([req.params.brand]).then( product => {
-//     products.push(product[0])
-//     res.status(200).send(products)
-//   })
-// })
+  db.get_products_by_brand([req.params.brand]).then( product => {
+    products.push(product[0])
+    res.status(200).send(products)
+  })
+})
 
 
 

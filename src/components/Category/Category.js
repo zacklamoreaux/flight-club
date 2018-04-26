@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import getCategory from '../../ducks/reducer'
+import { connect } from 'react-redux';
 
-export default class Category extends Component {
+class Category extends Component {
   render() {
     return (
       <div>
@@ -12,3 +14,11 @@ export default class Category extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    category: state.category
+  }
+}
+
+export default connect(mapStateToProps, {getCategory})(Category)
