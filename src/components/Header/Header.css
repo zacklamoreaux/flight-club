@@ -11,8 +11,8 @@
 .ht-right {
   display: flex;
   justify-content: end;
-  margin: 0px 900px;
-  align-items: center
+  align-items: center;
+  float: right;
 }
 
 .logo {

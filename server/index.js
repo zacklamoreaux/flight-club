@@ -81,17 +81,18 @@ app.get('/clone/product/:id', function(req, res) {
   const db = req.app.get('db')
 
   db.get_product_by_id([req.params.id]).then( product => {
+    console.log(product)
     res.status(200).send(product[0])
   })
 })
 
 app.get('/clone/products/:brand', function(req, res) {
   const db = req.app.get('db')
-  const products = []
+  
 
   db.get_products_by_brand([req.params.brand]).then( product => {
-    products.push(product[0])
-    res.status(200).send(products)
+    console.log(product)
+    res.status(200).send(product)
   })
 })
 

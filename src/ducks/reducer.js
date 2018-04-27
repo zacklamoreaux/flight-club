@@ -1,45 +1,39 @@
 import axios from 'axios'
 
 const initialState = {
-  id: '',
-  brand: '',
-  model: '',
-  name: '',
-  imgurl: '',
-  gender: '',
-  price: '',
-  color: '',
-  size: ''
+  products: [],
+  shoe: {}
 }
 
-const GET_CATEGORY = 'GET_CATEGORY';
-const GET_INDIVIDUAL = 'GET_INDIVIDUAL';
+const GET_PRODUCTS = 'GET_PRODUCTS';
+const GET_SHOE = 'GET_SHOE';
 
-export function getCategory(category) {
-  let brand = axios.get(`/clone/products/${category}`).then( res => {
+export function getProducts(brand) {
+  let products = axios.get(`/clone/products/${brand}`).then( res => {
+    console.log(res.data)
     return res.data
   })
   return {
-    type: GET_CATEGORY,
-    payload: brand
+    type: GET_PRODUCTS,
+    payload: products
   }
 }
 
-export function getIndividual(individual) {
-  let shoe = axios.get(`/clone/products${individual}`).then( res => {
+export function getShoe(id) {
+  let shoe = axios.get(`/clone/product/${id}`).then( res => {
     return res.data
   })
   return {
-    type: GET_INDIVIDUAL,
+    type: GET_SHOE,
     payload: shoe
   }
 }
 
 export default function reducer( state = initialState, action) {
   switch (action.type) {
-    case GET_CATEGORY:
-      return Object.assign({}, state, { 'brand': action.payload })
-    case GET_INDIVIDUAL:
+    case GET_PRODUCTS:
+      return Object.assign({}, state, { 'products': action.payload })
+    case GET_SHOE:
       return Object.assign({}, state, { 'shoe': action.payload })
     default:
       return state;

@@ -15,6 +15,7 @@ export default class Home extends Component {
     return (
       <div className='app'>
         <Header />
+        {/* <Display /> */}
         <ReactCarousel />
         <FindYourPair />
         <NewArrivals />
