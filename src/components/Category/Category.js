@@ -9,7 +9,7 @@ import Filter from '../Filter/Filter'
 class Category extends Component {
 
   componentDidMount() {
-    this.props.getProducts(this.props.match.params.category)
+    this.props.getProducts(this.props.match.params.products)
   }
 
   render() {
@@ -27,6 +27,7 @@ class Category extends Component {
 
 function mapStateToProps(state) {
   const {products} = state
+  console.log(products)
   return {
     products
   }

@@ -42,8 +42,9 @@ export default class Card extends Component {
         </div>  
         <div className='prod-info'>
           {this.state.brand}
-          {this.state.model}
-          {this.state.name}
+          <br/>
+          {this.state.model} {this.state.name}
+          <br/>
           {this.state.price}
         </div>
       </div>
