@@ -2,7 +2,17 @@ import axios from 'axios'
 
 const initialState = {
   products: [],
-  item: {}
+  item: {
+    id: 0,
+    brand: '',
+    model: '',
+    name: '',
+    img: '',
+    gender: '',
+    price: 0,
+    color: '',
+    size: []
+    }
 }
 
 const GET_PRODUCTS = 'GET_PRODUCTS';
@@ -32,10 +42,10 @@ export function getItem(id) {
 
 export default function reducer( state = initialState, action) {
   switch (action.type) {
-    case GET_PRODUCTS:
+    case GET_PRODUCTS  + '_FULFILLED' :
     console.log(action.payload)
       return Object.assign({}, state, { 'products': action.payload })
-    case GET_ITEM:
+    case GET_ITEM  + '_FULFILLED':
       return Object.assign({}, state, { 'item': action.payload })
     default:
       return state;

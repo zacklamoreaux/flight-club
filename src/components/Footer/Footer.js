@@ -6,7 +6,7 @@ export default class Footer extends Component {
     return (
       <div className='footer-wrapper'>
         <div className='footer-logo'>
-          <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' alt='logo'/>
+          <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' className='logo' alt='logo'/>
         </div>
         <div className='footer-top'>
           <div>

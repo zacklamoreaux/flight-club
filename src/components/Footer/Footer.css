@@ -2,10 +2,21 @@
   
 } */
 
+
 .footer-logo {
   background: #333;
   display: flex;
   justify-content: center;
+  height: 50px;
+  /* width: 75px; */
+}
+
+
+
+.logo {
+  display: flex;
+  height: 25px;
+  width: 100px;
 }
 
 .footer-top {

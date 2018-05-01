@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Card from '../Card/Card' 
 import './Display.css'
+import { Link } from 'react-router-dom'
 
 export default class Display extends Component {
   constructor() {
@@ -16,9 +17,12 @@ export default class Display extends Component {
   }
 
   render() {
+    console.log(this.props.products)
     return (
       <div className='display'>
-        <Card id={9}/>
+        <Link to='/individual/10'>
+          <Card id={10}/>
+        </Link>
       </div>
     )
   }

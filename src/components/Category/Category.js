@@ -18,7 +18,7 @@ class Category extends Component {
       <div>
         <Header />
         <Filter />
-        <Display  />
+        <Display products={this.props.products}  />
         <Footer />
       </div>
     )
@@ -27,7 +27,7 @@ class Category extends Component {
 
 function mapStateToProps(state) {
   const {products} = state
-  console.log(products)
+  // console.log(products)
   return {
     products
   }

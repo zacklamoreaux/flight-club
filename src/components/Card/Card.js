@@ -16,7 +16,7 @@ export default class Card extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
     this.getProduct()
   }
 
@@ -43,7 +43,9 @@ export default class Card extends Component {
         <div className='prod-info'>
           {this.state.brand}
           <br/>
+          <br/>
           {this.state.model} {this.state.name}
+          <br/>
           <br/>
           {this.state.price}
         </div>
