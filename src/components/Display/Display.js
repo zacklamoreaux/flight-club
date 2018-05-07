@@ -8,7 +8,7 @@ export default class Display extends Component {
   render() {
     console.log(this.props.products)
     let display = this.props.products.map( (prod, i) => {
-      return <Link to={`/individual/${prod.id}`}><Card key={i} id={prod.id} /></Link>
+      return <Link key={i} to={`/individual/${prod.id}`}><Card item={prod} /></Link>
       console.log(prod)
       // console.log(prod.id)
     })

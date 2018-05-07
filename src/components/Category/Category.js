@@ -14,17 +14,26 @@ class Category extends Component {
     this.props.getProducts(this.props.match.params.category)
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log('PROPS', this.props.match.params.category, nextProps.match.params.category)
+    if(this.props.match.params.category !== nextProps.match.params.category) {
+      this.props.getProducts(nextProps.match.params.category)
+    }
+  }
+
   render() {
     console.log(this.props.products)
     return (
-      <div>
+      <div className='page'>
         <Header />
         <h1 className='title'>{this.props.match.params.category}</h1>
-        <div className='filter'>
-          <Filter product={this.props.products}/>
-        </div>
-        <div className='display'>
-          <Display products={this.props.products}  />
+        <div className='all'>
+          <div className='filter'>
+            <Filter products={this.props.products}/>
+          </div>
+          <div className='display'>
+            <Display products={this.props.products}  />
+          </div>
         </div>
         <Footer />
       </div>

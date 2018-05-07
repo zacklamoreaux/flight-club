@@ -1,4 +1,18 @@
-
 .title {
   text-align: center;
+  background: #f7f7f7;
+}
+
+.all {
+  display: flex;
+  padding: 0px 200px;
+  background: #f7f7f7;
+}
+
+.display {
+  float: right;
+}
+
+.page {
+  background: #f7f7f7;
 }

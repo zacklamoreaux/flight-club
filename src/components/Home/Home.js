@@ -18,7 +18,7 @@ export default class Home extends Component {
         {/* <Display /> */}
         <ReactCarousel />
         <FindYourPair />
-        <NewArrivals />
+        {/* <NewArrivals /> */}
         <TopCats />
         <Recom />
         <OurStores />

@@ -1,53 +1,23 @@
 import React, { Component } from 'react'
-import axios from 'axios';
 import './Card.css'
 
 export default class Card extends Component {
-  constructor() {
-    super() 
-
-    this.state = {
-      img: '',
-      brand: '',
-      model: '',
-      name: '',
-      price: ''
-    }
-  }
-
-  componentDidMount() {
-    console.log(this.props.id)
-    this.getProduct(this.props.id)
-  }
-
-  getProduct() {
-    axios.get(`/clone/product/${this.props.id}`).then(res => {
-      const { imgurl, brand, model, name, price } = res.data
-      this.setState({
-        img: imgurl,
-        brand: brand,
-        model: model,
-        name: name,
-        price: price
-      })
-    })
-    .catch(console.error)
-  }
 
   render() {
+    let { imgurl, brand, model, name, price} = this.props.item
     return (
       <div className='card'>
         <div className='img-wrapper'>
-          <img className='img' src={this.state.img} alt='shoe' />
+          <img className='img' src={imgurl} alt='shoe' />
         </div>  
         <div className='prod-info'>
-          {this.state.brand}
+          {brand}
           <br/>
           <br/>
-          {this.state.model} {this.state.name}
+          {model} {name}
           <br/>
           <br/>
-          ${this.state.price}
+          ${price}
         </div>
       </div>
     )

@@ -3,6 +3,7 @@
 .header-top {
   margin: 0px 140px;
   display: flex;
+  background: white;
 }
 
 .ht-left {
@@ -24,7 +25,8 @@
 }
 
 .search-bar {
-  align-items: flex-start
+  align-items: flex-start;
+  background: #f7f7f7;
 }
 
 .login-btn {

@@ -7,7 +7,8 @@ export default class TopCats extends Component {
       <div className='tc-wrapper'>        
         <div className='tc'>Air Jordan</div>
         <div className='tc'>NMD</div>
-        <div className='tc'>Yeezy</div>        
+        <div className='tc'>Yeezy</div>
+        <br />      
         <div className='tc'>Ultra Boost</div>
         <div className='tc'>Nike Basketball</div>
         <div className='tc'>Nike Running</div>

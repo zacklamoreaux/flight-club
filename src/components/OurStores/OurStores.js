@@ -5,10 +5,10 @@ export default class OurStores extends Component {
   render() {
     return (
       <div className='os-wrapper'>
-        <div className='store'>
+        <div className='la-store'>
           LA Store
         </div>
-        <div className='store'>
+        <div className='ny-store'>
           NYC Store
         </div>
       </div>

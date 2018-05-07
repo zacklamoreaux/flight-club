@@ -1,11 +1,11 @@
 .recom-wrapper {
-  background: blue;
+  background: #f7f7f7;
   display: flex;
   justify-content: space-around
 }
 
 .rec {
-  background: green;
+  background: white;
   width: 200px;
   height: 200px;
 }
