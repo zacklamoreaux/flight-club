@@ -4,16 +4,20 @@ import { connect } from 'react-redux'
 import ShoePic from '../ShoePic/ShoePic'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import Checkout from '../CheckOut/Checkout'
+import './Individual.css'
 
 class Individual extends Component {
   componentDidMount() {
-    this.props.getItem(1)
+    console.log(this.props.match.params.individual)
+    this.props.getItem(this.props.match.params.individual)
   }
   render() {
     return (
-      <div>
+      <div className='wrapper'>
         <Header />
         <ShoePic item={this.props.item} />
+        <Checkout item={this.props.item} />
         <Footer />
       </div>
     )

@@ -17,7 +17,7 @@ export default class Card extends Component {
 
   componentDidMount() {
     console.log(this.props.id)
-    this.getProduct()
+    this.getProduct(this.props.id)
   }
 
   getProduct() {
@@ -47,7 +47,7 @@ export default class Card extends Component {
           {this.state.model} {this.state.name}
           <br/>
           <br/>
-          {this.state.price}
+          ${this.state.price}
         </div>
       </div>
     )

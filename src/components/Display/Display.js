@@ -8,13 +8,15 @@ export default class Display extends Component {
   render() {
     console.log(this.props.products)
     let display = this.props.products.map( (prod, i) => {
-      <Card key={i} id={prod.id} />
+      return <Link to={`/individual/${prod.id}`}><Card key={i} id={prod.id} /></Link>
+      console.log(prod)
       // console.log(prod.id)
     })
     return (
-      <div>
-        <Card id='10' />
-        {display}
+      <div className='display-wrapper'>
+        <div className='display'>
+          {display}
+        </div>
         {console.log(display)}
       </div>
     )

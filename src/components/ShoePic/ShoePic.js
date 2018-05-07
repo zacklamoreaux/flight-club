@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import './ShoePic.css'
 
 export default class ShoePic extends Component {
   render() {
     return (
-      <div>
-        <img src={this.props.item.imgurl} />
+      <div className='pic-wrapper'>
+        <img src={this.props.item.imgurl} className='pic' />
       </div>
     )
   }

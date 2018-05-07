@@ -18,26 +18,28 @@ export default class Header extends Component {
             <Link to='/'>
               <img src='https://www.flightclub.com/media/vaimo/uploadlogo/default/FC.png' alt='logo' className='logo' />
             </Link>
-            <input type='text' className='search-bar' />
+            <input placeholder='Search' type='text' className='search-bar' />
           </div>
           <div className='ht-right'>
+          <button type='dropbtn'>$ USD</button>
             <a href={process.env.REACT_APP_LOGIN}>
               <button className='login-btn' onClick={() => this.login()}>login</button>
             </a>
+          <Link to='/cart'><button>Cart</button></Link>
           </div>
         </div>
         <div className='header-bottom'>
           <div className="topnav">
-            <Link to='/category/Air%20Jordan'>Air Jordan</Link>
+            <Link to='/category/Air Jordan'>Air Jordan</Link>
             <Link to='/category/Nike'>Nike</Link>
             <Link to='/category/Adidas'>Adidas</Link>
             <Link to='/category/Yeezy'>Yeezy</Link>
             <Link to='/category/Footwear'>Footwear</Link>
             <Link to='/category/Apparel'>Apparel</Link>
             <Link to='/category/Accessories'>Accessories</Link>
-            <Link to='/category/New%20Arrivals'>New Arrivals</Link>
-            <Link to='/category/Gift%20Cards'>Gift Cards</Link>
-            <Link to='/category/Price%20Drops'>Price Drops</Link>
+            <Link to='/category/New Arrivals'>New Arrivals</Link>
+            <Link to='/category/Gift Cards'>Gift Cards</Link>
+            <Link to='/category/Price Drops'>Price Drops</Link>
           </div>
         </div>
       </div>

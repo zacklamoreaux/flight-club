@@ -19,8 +19,9 @@ class Category extends Component {
     return (
       <div>
         <Header />
+        <h1 className='title'>{this.props.match.params.category}</h1>
         <div className='filter'>
-          <Filter />
+          <Filter product={this.props.products}/>
         </div>
         <div className='display'>
           <Display products={this.props.products}  />

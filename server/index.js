@@ -96,6 +96,15 @@ app.get('/clone/products/:brand', function(req, res) {
   })
 })
 
+app.get('/clone/products/:model', function (req, res) {
+  const db = req.app.get('db')
+
+  db.get_products_by_model([req.params.model]).then( product => {
+    console.log(product)
+    res.status(200).send(product)
+  })
+})
+
 
 
 massive(CONNECTION_STRING).then( db => {
