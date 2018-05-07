@@ -20,7 +20,7 @@ const GET_ITEM = 'GET_ITEM';
 
 export function getProducts(brand) {
   let products = axios.get(`/clone/products/${brand}`).then( res => {
-    console.log(res.data)
+    // console.log(res.data)
     return res.data
   })
   return {
@@ -42,7 +42,7 @@ export function getItem(id) {
 
 export default function reducer( state = initialState, action) {
   switch (action.type) {
-    case GET_PRODUCTS  + '_FULFILLED' :
+    case GET_PRODUCTS  + '_FULFILLED':
     console.log(action.payload)
       return Object.assign({}, state, { 'products': action.payload })
     case GET_ITEM  + '_FULFILLED':

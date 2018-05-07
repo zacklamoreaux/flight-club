@@ -16,7 +16,7 @@ export default class Card extends Component {
   }
 
   componentDidMount() {
-    // console.log(this.props)
+    console.log(this.props.id)
     this.getProduct()
   }
 

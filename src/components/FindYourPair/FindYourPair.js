@@ -5,9 +5,16 @@ export default class FindYourPair extends Component {
   render() {
     return (
       <div className='fyp-wrapper'>
-        <div className='fyp'>Men</div>
-        <div className='fyp'>Women</div>
-        <div className='fyp'>Kids</div>
+        <div className='title'>
+          <p>
+            FIND YOUR PAIR
+          </p>
+        </div>
+        <div className='links'>
+          <div className='fyp'>Men</div>
+          <div className='fyp'>Women</div>
+          <div className='fyp'>Kids</div>
+        </div>
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Category.css'
 import {getProducts} from '../../ducks/reducer'
 import { connect } from 'react-redux'
 import Header from '../Header/Header'
@@ -9,16 +10,21 @@ import Filter from '../Filter/Filter'
 class Category extends Component {
 
   componentDidMount() {
-    this.props.getProducts(this.props.match.params.products)
+    console.log(this.props.match.params.category)
+    this.props.getProducts(this.props.match.params.category)
   }
 
   render() {
-    console.log(this.props.match)
+    console.log(this.props.products)
     return (
       <div>
         <Header />
-        <Filter />
-        <Display products={this.props.products}  />
+        <div className='filter'>
+          <Filter />
+        </div>
+        <div className='display'>
+          <Display products={this.props.products}  />
+        </div>
         <Footer />
       </div>
     )
