@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default class Display extends Component {
   render() {
-    console.log(this.props.products)
+    // console.log(this.props.products)
     let display = this.props.products.map( (prod, i) => {
       return <Link key={i} to={`/individual/${prod.id}`}><Card item={prod} /></Link>
       console.log(prod)
@@ -17,7 +17,7 @@ export default class Display extends Component {
         <div className='display'>
           {display}
         </div>
-        {console.log(display)}
+        {/* {console.log(display)} */}
       </div>
     )
   }

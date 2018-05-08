@@ -8,9 +8,11 @@
 }
 
 .box {
+  display: block;
+  justify-content: center;
   background: white;
-  width:300px;
-  height:300px;
+  width:600px;
+  height:600px;
   text-align: center;
 }
 

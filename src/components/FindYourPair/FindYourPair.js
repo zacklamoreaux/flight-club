@@ -10,28 +10,22 @@ export default class FindYourPair extends Component {
           <h1>FIND YOUR PAIR</h1>
         </div>
         <div className='boxes'>
-          {/* <Link to='/category/Men'> */}
+          <Link to='/category/Men'>
           <div className='box'>
-            <div className='img-wrapper'>
-              <img src='https://www.flightclub.com/media/wysiwyg/home/Men_801781_1_Resized.jpg' alt='pic' className='img' />
-              <br />
-              <h2>MEN</h2>
-            </div>
+            <img src='https://www.flightclub.com/media/wysiwyg/home/Men_801781_1_Resized.jpg' alt='pic' className='img' />
+            <br />
+            <p>MEN</p>
           </div>
-          {/* </Link> */}
+          </Link>
           <div className='box'>
-          <div className='img-wrapper'>
-              <img src='https://www.flightclub.com/media/wysiwyg/home/Women_802113_1_Resized_1.jpg' alt='pic' className='img' />
-              <br />
-              <h2>WOMEN</h2>
-            </div>
+            <img src='https://www.flightclub.com/media/wysiwyg/home/Women_802113_1_Resized_1.jpg' alt='pic' className='img' />
+            <br />
+            <p>WOMEN</p>
           </div>
           <div className='box'>
-          <div className='img-wrapper'>
-              <img src='https://www.flightclub.com/media/wysiwyg/home/Kids_012603_1_Resized.jpg' alt='pic' className='img' />
-              <br />
-              <h2>KIDS</h2>
-            </div>
+            <img src='https://www.flightclub.com/media/wysiwyg/home/Kids_012603_1_Resized.jpg' alt='pic' className='img' />
+            <br />
+            <p>KIDS</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-// import {getItem} from '../../ducks/reducer'
 import { connect } from 'react-redux'
 import ShoePic from '../ShoePic/ShoePic'
 import Header from '../Header/Header'
@@ -15,8 +14,8 @@ export default class Individual extends Component {
       item: {}
     }
   }
+
   componentDidMount() {
-    console.log(this.props)
     axios.get(`/clone/product/${this.props.match.params.individual}`).then( res => {
       console.log(res.data)
       this.setState({
@@ -24,6 +23,7 @@ export default class Individual extends Component {
       })
     })
   }
+  
   render() {
     return (
       <div className='wrapper'>
@@ -36,11 +36,3 @@ export default class Individual extends Component {
   }
 }
 
-// function mapStateToProps(state) {
-//   const {item} = state
-//   return {
-//     item
-//   }
-// }
-
-// export default connect(mapStateToProps, {getItem})(Individual)
