@@ -14,10 +14,11 @@ const {
   DOMAIN,
   CLIENT_ID,
   CLIENT_SECRET,
-  CALLBACK_URL
+  CALLBACK_URL,
+  SUCCESS_REDIRECT
 } = process.env
 
-// app.use(express.static(__dirname + '../build'))
+app.use( express.static( `${__dirname}/../build` ) );
 
 app.use(bodyParser.json())
 app.use(session({
@@ -59,7 +60,7 @@ passport.deserializeUser( (id, done) => {
 
 app.get('/auth', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-  successRedirect: 'http://localhost:3000'
+  successRedirect: SUCCESS_REDIRECT
 }))
 
 app.get('/auth/me', function(req, res) {
@@ -72,7 +73,7 @@ app.get('/auth/me', function(req, res) {
 
 app.get('/logout', function(req, res) {
   req.logout()
-  res.redirect('http://localhost:3000')
+  res.redirect(SUCCESS_REDIRECT)
 })
 
 

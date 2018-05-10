@@ -30,16 +30,16 @@ export default class Header extends Component {
         </div>
         <div className='header-bottom'>
           <div className="topnav">
-            <Link to='/category/Air Jordan'>Air Jordan</Link>
-            <Link to='/category/Nike'>Nike</Link>
-            <Link to='/category/Adidas'>Adidas</Link>
-            <Link to='/category/Yeezy'>Yeezy</Link>
-            <Link to='/category/Footwear'>Footwear</Link>
-            <Link to='/category/Apparel'>Apparel</Link>
-            <Link to='/category/Accessories'>Accessories</Link>
-            <Link to='/category/New Arrivals'>New Arrivals</Link>
-            <Link to='/category/Gift Cards'>Gift Cards</Link>
-            <Link to='/category/Price Drops'>Price Drops</Link>
+            <Link to='/category/Air Jordan'>AIR JORDAN</Link>
+            <Link to='/category/Nike'>NIKE</Link>
+            <Link to='/category/Adidas'>ADIDAS</Link>
+            <Link to='/category/Yeezy'>YEEZY</Link>
+            <Link to='/category/Footwear'>FOOTWEAR</Link>
+            <Link to='/category/Apparel'>APPAREL</Link>
+            <Link to='/category/Accessories'>ACCESSORIES</Link>
+            <Link to='/category/New Arrivals'>NEW ARRIVALS</Link>
+            <Link to='/category/Gift Cards'>GIFT CARDS</Link>
+            <Link to='/category/Price Drops'>PRICE DROPS</Link>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Display from '../Display/Display'
 import Filter from '../Filter/Filter'
-
+ 
 export default class Category extends Component {
   constructor() {
     super()
