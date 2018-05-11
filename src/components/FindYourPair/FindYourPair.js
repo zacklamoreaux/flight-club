@@ -11,11 +11,11 @@ export default class FindYourPair extends Component {
         </div>
         <div className='boxes'>
           <Link to='/category/Men'>
-          <div className='box'>
-            <img src='https://www.flightclub.com/media/wysiwyg/home/Men_801781_1_Resized.jpg' alt='pic' className='img' />
-            <br />
-            <p>MEN</p>
-          </div>
+            <div className='box'>
+              <img src='https://www.flightclub.com/media/wysiwyg/home/Men_801781_1_Resized.jpg' alt='pic' className='img' />
+              <br />
+              <p>MEN</p>
+            </div>
           </Link>
           <Link to='/category/Women'>
             <div className='box'>

@@ -1,10 +1,12 @@
 .fyp-wrapper {
   background: #f7f7f7;
+  /* display: flex; */
 }
 
 .boxes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0px 200px;
 }
 
 .box {

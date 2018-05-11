@@ -4,7 +4,9 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
       passport = require('passport'),
-      Auth0Strategy = require('passport-auth0')
+      Auth0Strategy = require('passport-auth0'),
+      utils = require('./utils'),
+      _ = require('lodash')
 
 const app = express()
 const port = 4000
@@ -26,6 +28,14 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
+app.use((req, res, next) => {
+  if (req.session.user) {
+    req.user = req.session.user
+  }
+  next()
+})
+
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(new Auth0Strategy({
